@@ -1,26 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 4.02 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.251 s  <<< FAILURE!
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.447 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.236 s  <<< FAILURE!
 java.lang.AssertionError: 
-Expected an array at JSON path "$" but found: {content=[], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=0, totalElements=0, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=0, first=true, empty=true}
+Expected an array at JSON path "$" but found: {content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=1, totalElements=1, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=1, first=true, empty=false}
 Expected: an instance of java.util.List
-     but: <{content=[], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=0, totalElements=0, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=0, first=true, empty=true}> is a java.util.LinkedHashMap
+     but: <{content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=1, totalElements=1, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=1, first=true, empty=false}> is a java.util.LinkedHashMap
 	at com.example.springapp.SpringappApplicationTests.testGetPagination(SpringappApplicationTests.java:57)
 
-com.example.springapp.SpringappApplicationTests.testGetPaginationAndSorting  Time elapsed: 0.022 s  <<< FAILURE!
-java.lang.AssertionError: 
-Expected an array at JSON path "$" but found: {content=[], pageable={sort={empty=false, sorted=true, unsorted=false}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=0, totalElements=0, last=true, size=3, number=0, sort={empty=false, sorted=true, unsorted=false}, numberOfElements=0, first=true, empty=true}
-Expected: an instance of java.util.List
-     but: <{content=[], pageable={sort={empty=false, sorted=true, unsorted=false}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=0, totalElements=0, last=true, size=3, number=0, sort={empty=false, sorted=true, unsorted=false}, numberOfElements=0, first=true, empty=true}> is a java.util.LinkedHashMap
-	at com.example.springapp.SpringappApplicationTests.testGetPaginationAndSorting(SpringappApplicationTests.java:68)
-
-com.example.springapp.SpringappApplicationTests.testGetSortedChildren  Time elapsed: 0.008 s  <<< FAILURE!
+com.example.springapp.SpringappApplicationTests.testGetSortedChildren  Time elapsed: 0.007 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<400>
 	at com.example.springapp.SpringappApplicationTests.testGetSortedChildren(SpringappApplicationTests.java:45)
 
-com.example.springapp.SpringappApplicationTests.testAddchildren  Time elapsed: 0.069 s  <<< FAILURE!
+com.example.springapp.SpringappApplicationTests.testAddchildren  Time elapsed: 0.048 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<201> but was:<200>
 	at com.example.springapp.SpringappApplicationTests.testAddchildren(SpringappApplicationTests.java:34)
 
