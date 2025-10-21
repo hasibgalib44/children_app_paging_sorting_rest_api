@@ -1,5 +1,10 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Children
 {
+    @Id
 private int babyId;
 private String babyFirstName;
 private String babyLastName;
