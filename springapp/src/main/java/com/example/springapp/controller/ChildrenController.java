@@ -41,11 +41,11 @@ public class ChildrenController {
 
     // ✅ Get children with pagination and sorting
     @GetMapping("/{offset}/{pagesize}/{field}")
-    public Page<Children> getChildrenWithPaginationAndSorting(
+    public List<Children> getChildrenWithPaginationAndSorting(
             @PathVariable int offset,
             @PathVariable int pagesize,
             @PathVariable String field) {
-        return childrenService.getChildrenOffsetWithPageSizeSortedByField(offset, pagesize, field);
+        return childrenService.getChildrenOffsetWithPageSizeSortedByField(offset, pagesize, field).getContent();
     }
 }
 
