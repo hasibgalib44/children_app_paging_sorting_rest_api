@@ -7,6 +7,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class ChildrenService {
@@ -19,7 +21,10 @@ public class ChildrenService {
     }
     public List<Children> getChildrenSortedByField(String field)
     {
-      return chr.findAll(Sort.by(Sort.Direction.ASC,field));
+       Iterable<Children> iterable = chr.findAll(Sort.by(Sort.Direction.ASC, field));
+    List<Children> list = new ArrayList<>();
+    iterable.forEach(list::add);
+    return list;
     }
 
 
