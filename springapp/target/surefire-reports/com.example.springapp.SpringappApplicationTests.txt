@@ -1,15 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.778 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.233 s  <<< FAILURE!
+Tests run: 12, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.416 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.229 s  <<< FAILURE!
 java.lang.AssertionError: 
 Expected an array at JSON path "$" but found: {content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, last=true, totalPages=1, totalElements=1, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, first=true, numberOfElements=1, empty=false}
 Expected: an instance of java.util.List
      but: <{content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, last=true, totalPages=1, totalElements=1, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, first=true, numberOfElements=1, empty=false}> is a java.util.LinkedHashMap
 	at com.example.springapp.SpringappApplicationTests.testGetPagination(SpringappApplicationTests.java:57)
-
-com.example.springapp.SpringappApplicationTests.testAddchildren  Time elapsed: 0.05 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<201> but was:<200>
-	at com.example.springapp.SpringappApplicationTests.testAddchildren(SpringappApplicationTests.java:34)
 
