@@ -26,9 +26,9 @@ public class ChildrenController {
     }
 
     // ✅ Get all children sorted by a specific field (ascending)
-    @GetMapping("/sortBy/babyFirstName/{field}")
-    public List<Children> getChildrenSortedByField(@PathVariable String field) {
-        return childrenService.getChildrenSortedByField(field);
+    @GetMapping("/sortBy/{babyFirstName}")
+    public List<Children> getChildrenSortedByField(@PathVariable String babyFirstName) {
+        return childrenService.getChildrenSortedByField(babyFirstName);
     }
 
     // ✅ Get children with pagination (offset, page size)
