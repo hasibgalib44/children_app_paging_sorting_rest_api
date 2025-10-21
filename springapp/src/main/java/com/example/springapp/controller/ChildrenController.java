@@ -6,6 +6,8 @@ import com.example.springapp.model.Children;
 import com.example.springapp.service.ChildrenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,11 +21,12 @@ public class ChildrenController {
     private ChildrenService childrenService;
 
     // ✅ Create (POST)
-    @PostMapping
-    public String saveChildren(@RequestBody Children child) {
-        childrenService.saveChildren(child);
-        return "Child record saved successfully!";
-    }
+   @PostMapping
+public ResponseEntity<Children> saveChildren(@RequestBody Children child) {
+    childrenService.saveChildren(child);
+    // Return the saved child object with HTTP 201
+    return new ResponseEntity<>(child, HttpStatus.CREATED);
+}
 
     // ✅ Get all children sorted by a specific field (ascending)
     @GetMapping("/sortBy/{field}")
