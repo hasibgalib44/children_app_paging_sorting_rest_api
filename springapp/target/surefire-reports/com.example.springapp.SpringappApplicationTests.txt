@@ -1,19 +1,27 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.447 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.236 s  <<< FAILURE!
+Tests run: 12, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 3.428 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+com.example.springapp.SpringappApplicationTests.testGetPagination  Time elapsed: 0.206 s  <<< FAILURE!
 java.lang.AssertionError: 
-Expected an array at JSON path "$" but found: {content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=1, totalElements=1, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=1, first=true, empty=false}
+Expected an array at JSON path "$" but found: {content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, last=true, totalPages=1, totalElements=1, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, first=true, numberOfElements=1, empty=false}
 Expected: an instance of java.util.List
-     but: <{content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, totalPages=1, totalElements=1, last=true, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, numberOfElements=1, first=true, empty=false}> is a java.util.LinkedHashMap
+     but: <{content=[{"babyId":1,"babyFirstName":"raj","babyLastName":"bhr","fatherName":"yer","motherName":"nmvb","address":"mkwer"}], pageable={sort={empty=true, sorted=false, unsorted=true}, offset=0, pageNumber=0, pageSize=3, paged=true, unpaged=false}, last=true, totalPages=1, totalElements=1, size=3, number=0, sort={empty=true, sorted=false, unsorted=true}, first=true, numberOfElements=1, empty=false}> is a java.util.LinkedHashMap
 	at com.example.springapp.SpringappApplicationTests.testGetPagination(SpringappApplicationTests.java:57)
 
-com.example.springapp.SpringappApplicationTests.testGetSortedChildren  Time elapsed: 0.007 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<400>
-	at com.example.springapp.SpringappApplicationTests.testGetSortedChildren(SpringappApplicationTests.java:45)
+com.example.springapp.SpringappApplicationTests.testGetSortedChildren  Time elapsed: 0.005 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: 
+Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Type mismatch: cannot convert from Iterable<Children> to List<Children>
 
-com.example.springapp.SpringappApplicationTests.testAddchildren  Time elapsed: 0.048 s  <<< FAILURE!
+	at com.example.springapp.SpringappApplicationTests.testGetSortedChildren(SpringappApplicationTests.java:43)
+Caused by: java.lang.Error: 
+Unresolved compilation problem: 
+	Type mismatch: cannot convert from Iterable<Children> to List<Children>
+
+	at com.example.springapp.SpringappApplicationTests.testGetSortedChildren(SpringappApplicationTests.java:43)
+
+com.example.springapp.SpringappApplicationTests.testAddchildren  Time elapsed: 0.045 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<201> but was:<200>
 	at com.example.springapp.SpringappApplicationTests.testAddchildren(SpringappApplicationTests.java:34)
 
