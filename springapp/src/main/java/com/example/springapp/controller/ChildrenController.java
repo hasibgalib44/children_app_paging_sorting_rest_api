@@ -1,4 +1,5 @@
-package controller;
+package com.example.springapp.controller;
+
 
 
 import com.example.springapp.model.Children;
